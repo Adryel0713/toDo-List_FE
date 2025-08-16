@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/lista.js" defer></script>
+    <title>Tarefas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="adicionar">
+            <div class="icone">
+                <ion-icon name="add-outline"></ion-icon>
+            </div>
+            <div class="texto">
+                <p>Tarefa</p>
+            </div>
+        </div>
+        <div class="lista">
+        </div>
+        <div class="message">
+        </div>
+        <div class="painel">
+            <div class="box-form">
+                <ion-icon name="close-outline" id="fechar"></ion-icon>
+                <form>
+                    <div class="input-box">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="">
+                    </div>
+                    <div class="input-box">
+                        <label for="desc">Descrição</label>
+                        <input type="text" name="desc" id="desc" placeholder="">
+                    </div>
+                    <div class="option-box">
+                        <label for="tarefa">Tarefa</label>
+                        <select name="tarefa" id="tarefa">
+                            <option value="feito">Feito</option>
+                            <option value="pendente">Pendente</option>
+                        </select>
+                    </div>
+                    <div class="botoes">
+                        <button id="salvar">Salvar</button>
+                        <button id="excluir">Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

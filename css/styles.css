@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    background-color: #1B1C21;
+    overflow-x: hidden;
+    transition: all 3s ease-in-out;
+}
+.lista{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1300px; 
+    overflow: auto; 
+}
+.aviso{
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    
+    width: 350px;
+    height: 100px;
+    gap: 1rem;
+
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.aviso:hover{
+    transform: scale(1.1);
+}
+.lista h3, .lista p{
+    padding: .4rem .8rem;
+    white-space: wrap;
+    color: #F1F6FD;
+}
+.errado h3{
+    font-size: 1.3rem;
+    color: #B66A70;
+}
+.lista p{
+    font-size: 1rem;
+}
+.errado ion-icon{
+    font-size: 3rem;
+    color: #DF6667;
+}
+.certo ion-icon{
+    font-size: 3rem;
+    color: #35A984;
+}
+.icone ion-icon{
+    font-size: 3rem;
+    color: #1D66B9;
+}
+.certo{
+    background: linear-gradient(to left, #232531 50%, #0C4031);
+}
+.errado{
+    background: linear-gradient(to left, #232531 50%, #470508);
+}
+.adicionar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.adicionar:hover{
+    transform: scale(1.1);
+}
+.adicionar p{
+    font-size: 2rem;
+    color: white;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 2rem;
+}
+label{
+    color: rgba(255, 255, 255, 0.205);
+}
+.painel.aberto {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.painel{
+    position: relative;
+    display: none;
+    width: 500px;
+    height: 350px;
+    background-color: #22232c;
+    border-radius: .6rem;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+
+    z-index: 3;
+}
+form{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+}
+
+.funcionou{
+    color: #199471;
+}
+.nao_funcionou{
+    color: #DF6667;
+}
+input{
+    padding: .6rem;
+    width: 300px;
+    height: 40px;
+    display: block;
+    outline: 0;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    border-radius: .4rem;
+    color: whitesmoke;
+}
+select{
+
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 30px;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    border-radius: .1rem;
+    color: whitesmoke;
+}
+option{
+    background-color: #1B1C21;
+    border-radius: 2rem;
+}
+#desc{
+    height: 50px;
+}
+.botoes{
+    display: flex;
+    padding-top: 1rem;
+    gap: 5rem;
+}
+button{
+    padding: .6rem 1rem;
+}
+#salvar{
+    background-color: #199471;
+    color: aliceblue;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+#excluir{
+    background-color: #DF6667;
+    color: aliceblue;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.box-form{
+    position: relative;
+}
+.box-form > ion-icon{
+    padding: 1rem;
+    font-size: 2.5rem;
+    right: 0;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+@media screen and (max-width: 811px) {
+.lista{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1300px; 
+    overflow: auto; 
+}
+.aviso{
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    
+    width: 260px;
+    height: 100px;
+    gap: 1rem;
+
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.painel{
+    position: relative;
+    display: none;
+    width: 250px;
+    height: 400px;
+    background-color: #22232c;
+    border-radius: .6rem;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+
+    z-index: 3;
+}
+form{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+}
+input{
+    padding: .6rem;
+    width: 200px;
+    height: 40px;
+    display: block;
+    outline: 0;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    border-radius: .4rem;
+    color: whitesmoke;
+
+}
+select{
+
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 30px;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    border-radius: .1rem;
+    color: whitesmoke;
+}
+button{
+    margin-top: 2rem;
+}
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #0D0D0D inset !important;
+  box-shadow: 0 0 0px 1000px #22232c inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+  transition: background-color 1000s ease-in-out 0s;
+}
